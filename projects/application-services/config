@@ -1,7 +1,7 @@
 # vim: filetype=yaml sw=2
 filename: '[% project %]-[% c("version") %]-[% c("var/build_id") %].tar.gz'
-version: 63.0.0
-git_hash: 8e63363359c3d20385ed55f5308d19e321816898
+version: 67.0.0
+git_hash: 6a234c2b1e1972f11e585551d4cf2e40e84bf16f
 git_url: https://github.com/mozilla/application-services
 
 var:
@@ -90,4 +90,3 @@ input_files:
   - filename: mavenLocal.patch
     enable: '[% !c("var/fetch_gradle_dependencies") %]'
   - filename: target.patch
-  - filename: 40085.patch
