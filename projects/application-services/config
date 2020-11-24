@@ -88,7 +88,7 @@ input_files:
   # `cargo vendor vendor` in the `application-services` directory has vendored
   # the sources.
   - URL: https://people.torproject.org/~gk/mirrors/sources/application-services-vendor-[% c('var/rust_vendor_version') %].tar.bz2
-    sha256sum: 13bbe0b542a80ec528531eea5bd7fcedfc63e64cf5aed489a192ebc150c47bde
+    sha256sum: 2e50c7387a23d7a6543706f0044d611b1d7383239741e9f3f035f4bf14db603d
   - filename: no-git.patch
   - filename: mavenLocal.patch
     enable: '[% !c("var/fetch_gradle_dependencies") %]'
