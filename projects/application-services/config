@@ -3,6 +3,7 @@ filename: '[% project %]-[% c("version") %]-[% c("var/build_id") %].tar.gz'
 version: 67.0.0
 git_hash: 6a234c2b1e1972f11e585551d4cf2e40e84bf16f
 git_url: https://github.com/mozilla/application-services
+git_submodule: 1
 
 var:
   container:
@@ -10,7 +11,7 @@ var:
   # This should be updated when the list of gradle dependencies is changed.
   gradle_dependencies_version: 3
   # This should be updated when the list of rust dependencies is changed.
-  rust_vendor_version: 2
+  rust_vendor_version: 3
   # For armv7 we need a different target than the default one we use for
   # GeckoView. We set this variable so the Rust project in the `input_files`
   # below can set the correct target when built for use in this project,
@@ -87,7 +88,7 @@ input_files:
   # `cargo vendor vendor` in the `application-services` directory has vendored
   # the sources.
   - URL: https://people.torproject.org/~gk/mirrors/sources/application-services-vendor-[% c('var/rust_vendor_version') %].tar.bz2
-    sha256sum: 70e02d587661e5d93dbe30ffa9265fb8b6b66ba8483f3268017ca919623688bc
+    sha256sum: 13bbe0b542a80ec528531eea5bd7fcedfc63e64cf5aed489a192ebc150c47bde
   - filename: no-git.patch
   - filename: mavenLocal.patch
     enable: '[% !c("var/fetch_gradle_dependencies") %]'
